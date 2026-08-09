@@ -1,0 +1,29 @@
+# Core web framework
+fastapi
+uvicorn[standard]
+
+# Authentication / JWT
+python-jose[cryptography]
+passlib[bcrypt]
+python-multipart
+
+# Google OAuth + Gmail API
+google-auth
+google-auth-oauthlib
+google-api-python-client
+google-cloud-bigquery
+
+# Configuration
+python-dotenv
+
+# Database
+sqlalchemy
+asyncpg
+
+# Data ingestion / processing
+pandas
+openpyxl
+pyarrow
+
+# HTTP / async utilities
+httpx
