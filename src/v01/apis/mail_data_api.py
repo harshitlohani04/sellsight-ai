@@ -16,7 +16,7 @@ import os
 
 version = 'v1'
 service_type = 'gmail'
-user = 'kartiklohani2004@gmail.com' #hardcoded for now
+user = 'testuser' #hardcoded for now
 TOKEN_JSON = os.path.join(os.getcwd(), f"token_{version}_{service_type}_{user}.json")
 
 app = APIRouter()
@@ -80,21 +80,6 @@ async def gmail_callback(
             state=state,
             code_verifier=code_verifier
         )
-
-        # print(credentials.to_json())
-
-        # service = create_gmail_service(credentials)
-
-        # profile = service.users().getProfile(
-        #     userId="me"
-        # ).execute()
-
-        # email = profile.get("emailAddress")
-
-        # return {
-        #     "message": "Gmail connected successfully",
-        #     "email": email
-        # }
 
         ''' Storing the credentials in a json file for further requests '''
         with open(TOKEN_JSON, 'w+') as file:
