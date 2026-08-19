@@ -1,4 +1,4 @@
-from .gmail_app import create_gmail_service
+from .utils.gmail_app import create_gmail_service
 from .mail_data_api import TOKEN_JSON
 
 from google.oauth2.credentials import Credentials

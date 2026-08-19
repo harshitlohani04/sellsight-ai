@@ -9,7 +9,7 @@ SCOPES = [
     "https://www.googleapis.com/auth/gmail.readonly"
 ]
 
-REDIRECT_URI = "http://localhost:8000/auth/gmail/callback"
+REDIRECT_URI = "http://127.0.0.1:8000/auth/gmail/callback"
 
 
 def create_authorization_url():

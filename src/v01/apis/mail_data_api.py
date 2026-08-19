@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Request, APIRouter
 from fastapi.responses import RedirectResponse
 
-from .gmail_app import (
+from .utils.gmail_app import (
     create_authorization_url,
     exchange_code_for_credentials,
     create_gmail_service
@@ -59,8 +59,12 @@ async def gmail_callback(
     code: str,
     state: str
 ):
-    print(request.cookies)
+    print("================================")
+    print("CALLBACK STATE:", state)
+    print("RECEIVED COOKIES:", request.cookies)
+    print("================================")
     stored_state = request.cookies.get("oauth_state")
+    print(stored_state)
 
     code_verifier = request.cookies.get("oauth_code_verifier")
 
